@@ -1,5 +1,5 @@
 {
-  "name": "@common/table",
+  "name": "@common/sptable",
   "version": "0.0.2",
   "description": "",
   "main": "index.js",
@@ -12,5 +12,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "gitHead": "85b36fa452cd2810dd8c0fc62909c68c1ba52cd9"
+  "gitHead": "06618fbf271b4285e128be38365e08d13bebb5b5"
 }
