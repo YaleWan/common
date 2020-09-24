@@ -9,9 +9,10 @@ const components = [CommonForm, CommonFormItem, CommonFormInput];
 
 const install = Vue => {
   components.forEach(Component => {
-    Vue.use(Component);
+    Vue.component(Component.name, Component);
   });
 };
+
 // 判断是否是直接引入文件
 if (typeof window !== "undefined" && window.Vue) {
   install(window.Vue);

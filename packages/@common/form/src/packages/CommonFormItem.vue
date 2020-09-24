@@ -19,6 +19,7 @@
 
 <script>
 export default {
+  name: "CommonFormItem",
   props: {
     model: {
       // 绑定的value值

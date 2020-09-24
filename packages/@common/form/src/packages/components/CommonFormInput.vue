@@ -12,7 +12,7 @@
 import FormMixin from "../mixins/form-mixin";
 
 export default {
-  name: "SchemaFormInput",
+  name: "CommonFormInput",
   mixins: [FormMixin]
 };
 </script>
