@@ -1,5 +1,5 @@
 {
-  "name": "@common/form",
+  "name": "spform",
   "version": "0.0.3",
   "description": "",
   "main": "index.js",
@@ -12,5 +12,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "gitHead": "06618fbf271b4285e128be38365e08d13bebb5b5"
+  "gitHead": "b228452d1ca3326d7a80b3aeabf9446d13554805"
 }
