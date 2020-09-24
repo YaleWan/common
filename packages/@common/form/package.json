@@ -1,5 +1,5 @@
 {
-  "name": "form",
+  "name": "@common/form",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -8,5 +8,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "gitHead": "ffecd381584b54ade0f720e5c39939d5efc77eee"
 }
