@@ -1,10 +1,15 @@
 {
-  "packages": ["packages/@common/*"],
-  "version": "0.0.3",
+  "packages": [
+    "packages/@common/*"
+  ],
+  "version": "0.0.4",
   "useWorkspaces": true,
   "npmClient": "yarn",
   "command": {
-    "ignoreChanges": ["*.md", "**/test/**"],
+    "ignoreChanges": [
+      "*.md",
+      "**/test/**"
+    ],
     "message": "chore(release): publish"
   }
 }

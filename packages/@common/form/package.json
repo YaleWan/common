@@ -1,6 +1,6 @@
 {
   "name": "@yhcommon/form",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "yalewan",
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -27,7 +27,7 @@
     "prettier": "^1.19.1",
     "vue-template-compiler": "^2.6.11"
   },
-  "publishConfig":{
+  "publishConfig": {
     "access": "public"
   },
   "gitHooks": {
