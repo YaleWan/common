@@ -1,16 +1,41 @@
 {
   "name": "@yhcommon/form",
   "version": "0.0.3",
-  "description": "",
-  "main": "index.js",
+  "author": "yalewan",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --mode lib --target lib --name yhcommon-form --dest lib src/index.js",
+    "lint": "vue-cli-service lint"
   },
-  "publishConfig": {
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-vue": "^6.2.2",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "publishConfig":{
     "access": "public"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "gitHead": "82fb6ae9357e0fc098a1ac339923f28ff0aa27e0"
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
 }
