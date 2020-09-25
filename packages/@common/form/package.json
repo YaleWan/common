@@ -1,6 +1,6 @@
 {
   "name": "@yhcommon/form",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "yalewan",
   "scripts": {
     "serve": "vue-cli-service serve",
