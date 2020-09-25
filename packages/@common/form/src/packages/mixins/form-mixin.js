@@ -2,9 +2,9 @@ export default {
   props: {
     value: [Number, String, Array, Object, Boolean, Date], // 绑定值
     prop: String,
-    modifier: String, // v-model修饰符
-    dynamicAttrs: Object, // 动态属性
-    options: Array, // 多选项目
+    modifier: String,
+    dynamicAttrs: Object,
+    options: Array,
     onEvents: {
       // 绑定事件
       type: Object,
@@ -26,11 +26,8 @@ export default {
       let _name = this.$options.name;
       return _name.replace("CommonForm", "").toLowerCase() || "";
     },
-    globalOptions() {
-      return this.$globalParams[this.componentName] || {};
-    },
     attrsAll() {
-      return { ...this.globalOptions, ...this.$attrs, ...this.dynamicAttrs };
+      return { ...this.$attrs, ...this.dynamicAttrs };
     }
   },
   methods: {

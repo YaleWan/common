@@ -4,14 +4,16 @@
   "author": "yalewan",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --mode lib --target dist --name yhcommon-form --dest lib src/index.js",
+    "build": "vue-cli-service build --mode lib --target lib --name yhcommon-form --dest lib src/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "element-ui": "^2.13.2",
+    "lodash.clonedeep": "^4.5.0",
     "vue": "^2.6.11"
   },
-  "main": "dist/yhcommon-form.umd.min.js",
+  "main": "lib/yhcommon-form.umd.min.js",
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",

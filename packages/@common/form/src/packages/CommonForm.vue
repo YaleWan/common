@@ -2,8 +2,7 @@
   <div class="common-form">
     <el-row
       class="common-form__row"
-      v-bind="layout"
-      v-for="(row, rowIndex) in formConfig"
+      v-for="(row, rowIndex) in formatedSchema"
       :key="rowIndex"
     >
       <template v-for="(col, colIndex) in row">
@@ -15,7 +14,7 @@
               v-bind="col.formItem"
               :prop="col.prop"
               :col="col"
-              :model="model"
+              :formModel="formModel"
               :options="options"
               v-on="$listeners"
             >
@@ -27,21 +26,11 @@
   </div>
 </template>
 <script>
+import CommonFormItem from "./CommonFormItem.vue";
+import LayoutMixin from "./mixins/layout-mixin";
 export default {
   name: "CommonForm",
-  props: {
-    formConfig: {
-      type: Object,
-      default: () => {}
-    },
-    formModel: {
-      type: Object,
-      default: () => {}
-    }
-  },
-  data() {
-    return {};
-  }
+  components: { CommonFormItem },
+  mixins: [LayoutMixin]
 };
 </script>
-<style scoped lang="less"></style>
