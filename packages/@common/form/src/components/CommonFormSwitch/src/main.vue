@@ -1,18 +1,16 @@
 <template>
-  <el-input
+  <el-switch
     v-model="bindVal"
     v-bind="attrsAll"
     v-on="onEvents"
     @change="$emit('change', { prop, value: $event })"
-  >
-  </el-input>
+  />
 </template>
 
 <script>
-import FormMixin from "../mixins/form-mixin";
-
+import FormMixin from "@/mixins/form-mixin";
 export default {
-  name: "CommonFormInput",
+  name: "CommonFormSwitch",
   mixins: [FormMixin]
 };
 </script>

@@ -14,10 +14,15 @@
 export default {
   data() {
     return {
-      // 表单布局
-      layout: { gutter: 16, justify: "start" },
+      layout: { gutter: 29, justify: "start" },
       // 表单绑定模型
-      model: { default_1: "", default_2: [], default_3: "" },
+      model: {
+        default_1: "",
+        default_2: [],
+        default_3: "",
+        default_4: false,
+        default_5: ""
+      },
       // 表单 schema
       schema: [
         [
@@ -39,6 +44,20 @@ export default {
             formItem: { label: "label:" },
             colGrid: { span: 8 }
           }
+        ],
+        [
+          {
+            type: "switch",
+            prop: "default_4",
+            formItem: { label: "label:" },
+            colGrid: { span: 12 }
+          },
+          {
+            type: "radio",
+            prop: "default_5",
+            formItem: { label: "label:" },
+            colGrid: { span: 12 }
+          }
         ]
       ],
       // 表单 options
@@ -50,9 +69,18 @@ export default {
         default_3: [
           { label: "选择A", value: "A" },
           { label: "选择B", value: "B" }
+        ],
+        default_5: [
+          { label: "选择A", value: "A" },
+          { label: "选择B", value: "B" }
         ]
       }
     };
+  },
+  methods: {
+    onChange(val) {
+      console.log("val", val);
+    }
   }
 };
 </script>

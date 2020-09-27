@@ -1,24 +1,26 @@
 <template>
-  <el-select
+  <el-radio-group
     v-model="bindVal"
     v-bind="attrsAll"
     v-on="onEvents"
     @change="$emit('change', { prop, value: $event })"
   >
-    <el-option
+    <el-radio
       v-for="(option, idx) in options"
       :key="`${option.value}_${idx}`"
-      :label="option.label"
-      :value="option.value"
+      :label="option.value"
       :disabled="option.disabled"
-    />
-  </el-select>
+    >
+      {{ option.label }}
+    </el-radio>
+  </el-radio-group>
 </template>
 
 <script>
-import FormMixin from "../mixins/form-mixin";
+import FormMixin from "@/mixins/form-mixin";
+
 export default {
-  name: "CommonFormSelect",
+  name: "CommonFormRadio",
   mixins: [FormMixin]
 };
 </script>
