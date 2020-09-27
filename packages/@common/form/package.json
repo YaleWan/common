@@ -3,7 +3,7 @@
   "version": "0.0.7",
   "author": "yalewan",
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build --mode lib --target lib --name yhcommon-form --dest lib src/index.js",
     "lint": "vue-cli-service lint"
   },

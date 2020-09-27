@@ -1,24 +1,15 @@
 <template>
-  <div>
-    <el-form
-      size="small"
-      label-position="left"
-      label-width="70px"
-      :model="formModel"
+  <el-form size="small" label-width="80px" :model="model">
+    <common-form
+      :layout="layout"
+      :formModel="model"
+      :formConfig="schema"
+      :options="options"
     >
-      <common-form
-        :layout="layout"
-        :formModel="formModel"
-        :formConfig="formConfig"
-        :options="options"
-      >
-        <template slot="name1">
-          <el-button type="primary">123</el-button>
-        </template>
-      </common-form>
-    </el-form>
-  </div>
+    </common-form>
+  </el-form>
 </template>
+
 <script>
 export default {
   data() {
@@ -26,53 +17,42 @@ export default {
       // 表单布局
       layout: { gutter: 16, justify: "start" },
       // 表单绑定模型
-      formModel: { abc: "", bcd: "" },
+      model: { default_1: "", default_2: [], default_3: "" },
       // 表单 schema
-      formConfig: [
+      schema: [
         [
           {
             type: "input",
-            prop: "abc",
-            formItem: { label: "测试" },
-            colGrid: { span: 8 },
-            attrs: {
-              clearable: true
-            },
-            on: { change: this.onNameChange, focus: this.onNameFocus }
+            prop: "default_1",
+            formItem: { label: "label:" },
+            colGrid: { span: 8 }
           },
           {
-            slot: "name1",
+            type: "checkbox",
+            prop: "default_2",
+            formItem: { label: "label:" },
             colGrid: { span: 8 }
           },
           {
             type: "select",
-            prop: "bcd",
-            formItem: { label: "测试" },
-            colGrid: { span: 8 },
-            attrs: {
-              clearable: true,
-              filterable: true,
-              multiple: true
-            },
-            on: { change: this.onNameChange, focus: this.onNameFocus }
+            prop: "default_3",
+            formItem: { label: "label:" },
+            colGrid: { span: 8 }
           }
         ]
       ],
+      // 表单 options
       options: {
-        bcd: [
-          { name: "123", label: "123" },
-          { name: "456", label: "456" }
+        default_2: [
+          { label: "选择A", value: "A" },
+          { label: "选择B", value: "B" }
+        ],
+        default_3: [
+          { label: "选择A", value: "A" },
+          { label: "选择B", value: "B" }
         ]
       }
     };
-  },
-  methods: {
-    onNameChange(value) {
-      console.log("value", value);
-    },
-    onNameFocus(e) {
-      console.log("e", e);
-    }
   }
 };
 </script>

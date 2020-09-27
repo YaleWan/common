@@ -16,5 +16,3 @@ export default {
   mixins: [FormMixin]
 };
 </script>
-
-<style lang="less" scoped></style>
