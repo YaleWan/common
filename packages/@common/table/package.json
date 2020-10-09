@@ -1,6 +1,6 @@
 {
   "name": "@yhcommon/table",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,5 +13,4 @@
   "author": "yhwang",
   "license": "ISC",
   "gitHead": "a161750df4e9ec83797555da2f6ab45e00936ddd"
-
 }
