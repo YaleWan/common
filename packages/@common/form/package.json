@@ -30,7 +30,8 @@
     "vue-template-compiler": "^2.6.11"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
@@ -41,5 +42,5 @@
       "git add"
     ]
   },
-  "gitHead": "7266d665919a3b4beb813f00cc8c7d3f1797b653"
+  "gitHead": "a12535e7d03e89389f251b338bd50d060640574f"
 }
