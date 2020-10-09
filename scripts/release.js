@@ -5,6 +5,7 @@ const inquirer = require('inquirer')
 const minimist = require('minimist')
 
 const cliOptions = minimist(process.argv)
+console.log('cliOptions', cliOptions)
 const curVersion = require('../lerna.json').version
 
 const release = async () => {
