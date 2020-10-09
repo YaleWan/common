@@ -4,7 +4,7 @@
   "author": "yalewan",
   "scripts": {
     "dev": "vue-cli-service serve",
-    "build": "vue-cli-service build --mode lib --target lib --name yhcommon-form --dest lib src/index.js",
+    "build": "vue-cli-service build --mode lib --target lib --name yhcommon-form --dest dist src/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -40,5 +40,6 @@
       "vue-cli-service lint",
       "git add"
     ]
-  }
+  },
+  "gitHead": "a161750df4e9ec83797555da2f6ab45e00936ddd"
 }
