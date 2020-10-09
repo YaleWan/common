@@ -32,6 +32,7 @@
     "semver": "^7.3.2"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
