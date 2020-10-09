@@ -1,6 +1,6 @@
 {
   "name": "@yhcommon/generator",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
