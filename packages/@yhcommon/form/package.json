@@ -13,7 +13,7 @@
     "lodash.clonedeep": "^4.5.0",
     "vue": "^2.6.11"
   },
-  "main": "lib/yhcommon-form.umd.min.js",
+  "main": "dist/yhcommon-form.umd.min.js",
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
@@ -28,10 +28,6 @@
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1",
     "vue-template-compiler": "^2.6.11"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"

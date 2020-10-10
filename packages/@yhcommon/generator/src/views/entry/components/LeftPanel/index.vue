@@ -7,6 +7,7 @@
       </div>
       <draggable
         class="components-draggable"
+        :list="item.components"
         :group="{ name: 'componentsGroup', pull: 'clone', put: false }"
         :clone="cloneComponent"
         draggable=".components-item"
@@ -19,8 +20,8 @@
           class="components-item"
         >
           <div class="components-body">
-            <svg-icon :icon-class="element.__config__.tagIcon" />
-            {{ element.__config__.label }}
+            <svg-icon :icon-class="element.__component_description__.tagIcon" />
+            {{ element.__component_description__.label }}
           </div>
         </div>
       </draggable>
@@ -29,7 +30,8 @@
 </template>
 <script>
 import draggable from "vuedraggable";
-import { inputComponents } from "@/utils/config";
+import { formComponents } from "@/utils/config";
+import cloneDeep from "lodash.clonedeep";
 export default {
   name: "LeftPanel",
   components: {
@@ -40,7 +42,7 @@ export default {
       leftComponents: [
         {
           title: "表单组件",
-          components: inputComponents
+          components: formComponents
         }
       ]
     };
@@ -49,8 +51,12 @@ export default {
     cloneComponen() {},
     onEnd(obj) {
       console.log("obj", obj);
+      // this.$store.dispatch("drawer/saveDrawingList", obj);
     },
-    cloneComponent() {}
+    cloneComponent(origin) {
+      const tempActiveData = cloneDeep(origin);
+      return tempActiveData;
+    }
   }
 };
 </script>

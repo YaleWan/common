@@ -2,10 +2,7 @@
 const execa = require('execa')
 const semver = require('semver')
 const inquirer = require('inquirer')
-const minimist = require('minimist')
 
-const cliOptions = minimist(process.argv)
-console.log('cliOptions', cliOptions)
 const curVersion = require('../lerna.json').version
 
 const release = async () => {
@@ -53,7 +50,7 @@ const release = async () => {
     }
   }
 
-  let distTag = cliOptions['dist-tag'] || 'latest'
+  let distTag = 'latest'
   if (bump === 'prerelease' || semver.prerelease(version)) {
     distTag = 'next'
   }
@@ -66,10 +63,6 @@ const release = async () => {
   ]
   // keep all packages' versions in sync
   lernaArgs.push('--force-publish')
-
-  if (cliOptions['local-registry']) {
-    lernaArgs.push('--no-git-tag-version', '--no-commit-hooks', '--no-push', '--yes')
-  }
 
   await execa(require.resolve('lerna/cli'), lernaArgs, { stdio: 'inherit' })
 }

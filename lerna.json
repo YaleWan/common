@@ -1,6 +1,6 @@
 {
   "packages": [
-    "packages/@common/*"
+    "packages/@yhcommon/*"
   ],
   "version": "0.0.14",
   "useWorkspaces": true,
@@ -10,6 +10,10 @@
       "*.md",
       "**/test/**"
     ],
-    "message": "chore(release): publish"
+    "message": "chore(release): publish",
+    "publishConfig": {
+      "access": "public",
+      "registry": "https://registry.npmjs.org/"
+    }
   }
 }

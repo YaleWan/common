@@ -4,9 +4,11 @@ import router from "@/router";
 import store from "@/store";
 import Element from "element-ui";
 import "normalize.css/normalize.css";
+import form from "@yhcommon/form";
+console.log(form);
 
 Vue.config.productionTip = false;
-Vue.use(Element);
+Vue.use(Element).use(form);
 import "@/icons";
 
 new Vue({
