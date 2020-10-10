@@ -6,14 +6,10 @@
   "useWorkspaces": true,
   "npmClient": "yarn",
   "command": {
-    "ignoreChanges": [
-      "*.md",
-      "**/test/**"
-    ],
-    "message": "chore(release): publish",
-    "publishConfig": {
-      "access": "public",
-      "registry": "https://registry.npmjs.org/"
+    "publish": {
+      "ignoreChanges": ["ignored-file", "*.md"],
+      "message": "chore(release): publish",
+      "registry": "https://npm.pkg.github.com"
     }
   }
 }
