@@ -2,12 +2,15 @@
   "packages": [
     "packages/@yhcommon/*"
   ],
-  "version": "0.0.15",
+  "version": "0.0.16",
   "useWorkspaces": true,
   "npmClient": "yarn",
   "command": {
     "publish": {
-      "ignoreChanges": ["ignored-file", "*.md"],
+      "ignoreChanges": [
+        "ignored-file",
+        "*.md"
+      ],
       "message": "chore(release): publish",
       "registry": "https://registry.npmjs.org/"
     }
