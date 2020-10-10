@@ -2,7 +2,7 @@
   "packages": [
     "packages/@yhcommon/*"
   ],
-  "version": "0.0.14",
+  "version": "0.0.15",
   "useWorkspaces": true,
   "npmClient": "yarn",
   "command": {
