@@ -1,35 +1,62 @@
 <template>
   <div class="core-contanier">
-    {{ drawingList }}
-    <draggable
-      class="drawing-board"
-      :animation="340"
-      group="componentsGroup"
-      :list="drawingList"
-    >
-      <div v-for="(item, index) in drawingList" :key="index">
-        {{ item.__default_config__.label }}
-      </div>
-      <div v-show="!drawingList.length" class="empty-info">
-        从左侧拖入或点选组件进行表单设计
-      </div>
-    </draggable>
+    <el-form size="small" label-width="80px">
+      <draggable
+        class="drawing-board"
+        :animation="340"
+        group="componentsGroup"
+        :list="drawingList"
+        draggable=".drawingList-item"
+      >
+        <draggable-item
+          v-for="(item, index) in formConfig"
+          :key="index"
+          :drawing-list="formConfig"
+          :row="item"
+          :formModel="formModel"
+          :options="options"
+          :layout="layout"
+          class="drawingList-item"
+        />
+        <div v-show="!drawingList.length" class="empty-info">
+          从左侧拖入或点选组件进行设计
+        </div>
+      </draggable>
+    </el-form>
   </div>
 </template>
 <script>
-import draggable from "vuedraggable";
+import Draggable from "vuedraggable";
+import DraggableItem from "../DraggableItem";
 // import { mapGetters } from "vuex";
 export default {
   name: "CoreContanier",
   components: {
-    draggable
+    Draggable,
+    DraggableItem
   },
   data() {
     return {
-      drawingList: []
+      drawingList: [],
+      formModel: {},
+      formConfig: [],
+      options: {},
+      layout: { gutter: 16, justify: "start" }
     };
   },
-  computed: {
+  watch: {
+    drawingList: {
+      handler(list) {
+        const formConfig = [];
+        list.forEach(item => {
+          formConfig.push(item.__default_config__);
+          this.$set(this.formModel, item.__default_config__.prop, "");
+        });
+        this.formConfig = [];
+        this.formConfig.push(formConfig);
+      },
+      deep: true
+    }
     // ...mapGetters(["drawingList"])
   }
 };

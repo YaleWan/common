@@ -1,12 +1,7 @@
 <template>
   <el-form size="small" label-width="80px" :model="model">
-    <common-form
-      :layout="layout"
-      :formModel="model"
-      :formConfig="schema"
-      :options="options"
-    >
-    </common-form>
+    <common-form-item :col="schema" :formModel="model" :options="options">
+    </common-form-item>
   </el-form>
 </template>
 
@@ -24,42 +19,12 @@ export default {
         default_5: ""
       },
       // 表单 schema
-      schema: [
-        [
-          {
-            type: "input",
-            prop: "default_1",
-            formItem: { label: "label:" },
-            colGrid: { span: 8 }
-          },
-          {
-            type: "checkbox",
-            prop: "default_2",
-            formItem: { label: "label:" },
-            colGrid: { span: 8 }
-          },
-          {
-            type: "select",
-            prop: "default_3",
-            formItem: { label: "label:" },
-            colGrid: { span: 8 }
-          }
-        ],
-        [
-          {
-            type: "switch",
-            prop: "default_4",
-            formItem: { label: "label:" },
-            colGrid: { span: 12 }
-          },
-          {
-            type: "radio",
-            prop: "default_5",
-            formItem: { label: "label:" },
-            colGrid: { span: 12 }
-          }
-        ]
-      ],
+      schema: {
+        type: "input",
+        prop: "default_1",
+        formItem: { label: "label:" },
+        colGrid: { span: 8 }
+      },
       // 表单 options
       options: {
         default_2: [

@@ -65,7 +65,6 @@ const release = async () => {
   lernaArgs.push('--force-publish')
 
   await execa(require.resolve('lerna/cli'), lernaArgs, { stdio: 'inherit' })
-  await execa('git', ['push'], { stdio: 'inherit' })
 }
 
 release().catch(err => {

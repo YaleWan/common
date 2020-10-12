@@ -1,6 +1,10 @@
 <template>
   <el-scrollbar class="left-panel">
-    <div v-for="(item, listIndex) in leftComponents" :key="listIndex">
+    <div
+      v-for="(item, listIndex) in leftComponents"
+      :key="listIndex"
+      class="components-contanier"
+    >
       <div class="components-title">
         <svg-icon icon-class="component" />
         {{ item.title }}
@@ -69,6 +73,9 @@ export default {
   width: 240px;
   padding: 20px;
   border-right: 1px solid #eee;
+  .components-contanier {
+    padding: 2px;
+  }
   .components-draggable {
     display: flex;
     justify-content: space-between;
