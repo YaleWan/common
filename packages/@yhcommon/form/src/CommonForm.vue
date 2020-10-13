@@ -1,12 +1,7 @@
 <template>
   <div class="common-form">
-    <el-row
-      class="common-form__row"
-      v-for="(row, rowIndex) in formatedSchema"
-      :key="rowIndex"
-      v-bind="layout"
-    >
-      <template v-for="(col, colIndex) in row">
+    <el-row class="common-form__row" v-bind="layout">
+      <template v-for="(col, colIndex) in formatedSchema">
         <el-col v-bind="col.colGrid" v-if="!col.hide" :key="colIndex">
           <slot v-if="col.slot" :name="col.slot"></slot>
           <template v-else>

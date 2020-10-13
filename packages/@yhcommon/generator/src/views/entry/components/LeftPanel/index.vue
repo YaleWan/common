@@ -34,7 +34,7 @@
 </template>
 <script>
 import draggable from "vuedraggable";
-import { formComponents } from "@/utils/config";
+import { formComponents, layoutComponents } from "@/utils/config";
 import cloneDeep from "lodash.clonedeep";
 export default {
   name: "LeftPanel",
@@ -47,6 +47,10 @@ export default {
         {
           title: "表单组件",
           components: formComponents
+        },
+        {
+          title: "布局组件",
+          components: layoutComponents
         }
       ]
     };

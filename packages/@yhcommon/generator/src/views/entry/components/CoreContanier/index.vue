@@ -1,5 +1,6 @@
 <template>
   <div class="core-contanier">
+    {{ formConfig }}
     <el-form size="small" label-width="80px">
       <draggable
         class="drawing-board"
@@ -12,7 +13,7 @@
           v-for="(item, index) in formConfig"
           :key="index"
           :drawing-list="formConfig"
-          :row="item"
+          :col="item"
           :formModel="formModel"
           :options="options"
           :layout="layout"
@@ -47,13 +48,11 @@ export default {
   watch: {
     drawingList: {
       handler(list) {
-        const formConfig = [];
+        this.formConfig = [];
         list.forEach(item => {
-          formConfig.push(item.__default_config__);
+          this.formConfig.push(item.__default_config__);
           this.$set(this.formModel, item.__default_config__.prop, "");
         });
-        this.formConfig = [];
-        this.formConfig.push(formConfig);
       },
       deep: true
     }

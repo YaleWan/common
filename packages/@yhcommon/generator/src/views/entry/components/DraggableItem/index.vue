@@ -1,16 +1,14 @@
 <template>
   <div>
     <el-row v-bind="layout" type="flex" class="schema-main__row">
-      <template v-for="(col, colIndex) in row">
-        <el-col v-bind="col.colGrid" :key="colIndex">
-          <common-form-item
-            :col="col"
-            :formModel="formModel"
-            :options="options"
-            v-on="$listeners"
-          />
-        </el-col>
-      </template>
+      <el-col v-bind="col.colGrid">
+        <common-form-item
+          :col="col"
+          :formModel="formModel"
+          :options="options"
+          v-on="$listeners"
+        />
+      </el-col>
     </el-row>
   </div>
 </template>
@@ -20,8 +18,8 @@ export default {
     drawingList: {
       type: Array
     },
-    row: {
-      type: Array
+    col: {
+      type: Object
     },
     formModel: {
       type: Object
