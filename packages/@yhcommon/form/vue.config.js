@@ -8,6 +8,12 @@ module.exports = {
       filename: "index.html"
     }
   },
+  configureWebpack: {
+    externals: {
+      vue: "Vue",
+      "element-ui": "Element"
+    }
+  },
   chainWebpack: config => {
     config.resolve.alias.set("@", path.resolve("src"));
   }
