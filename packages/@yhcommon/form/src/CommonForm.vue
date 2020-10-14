@@ -38,10 +38,7 @@ export default {
     formConfig: {
       // 表单的格局
       type: Array,
-      required: true,
-      validator(val) {
-        return val.every(arr => Array.isArray(arr) && arr.length > 0);
-      }
+      required: true
     },
     formModel: {
       // 绑定的value值
