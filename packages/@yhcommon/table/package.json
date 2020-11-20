@@ -1,11 +1,14 @@
 {
   "name": "@yhcommon/table",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build --mode lib --target lib --name yhcommon-table --dest dist src/index.js",
     "lint": "vue-cli-service lint"
   },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"

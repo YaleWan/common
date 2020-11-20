@@ -2,7 +2,7 @@
   <div class="common-form">
     <el-row class="common-form__row" v-bind="layout">
       <template v-for="(col, colIndex) in formatedSchema">
-        <el-col v-bind="col.colGrid" v-if="!col.hide" :key="colIndex">
+        <el-col v-bind="col.colGrid" :key="colIndex">
           <slot v-if="col.slot" :name="col.slot"></slot>
           <template v-else>
             <!-- 具体组件的配置项目 -->
@@ -59,12 +59,6 @@ export default {
   computed: {
     formatedSchema() {
       let _schema = cloneDeep(this.formConfig);
-      // _schema.map(list => {
-      //   let _showNum = list.filter(item => !item.hide).length || 1;
-      //   list.map(obj => {
-      //     obj.colGrid = obj.colGrid || { span: Math.round(24 / _showNum) };
-      //   });
-      // });
       return _schema.filter(item => !item.hide);
     }
   }

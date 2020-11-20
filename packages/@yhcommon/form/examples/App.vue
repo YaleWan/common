@@ -25,8 +25,8 @@ export default {
       // 表单 schema
       schema: [
         {
-          type: "input",
-          prop: "default_1",
+          type: "select",
+          prop: "default_2",
           formItem: { label: "label:" },
           colGrid: { span: 8 }
         }
