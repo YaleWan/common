@@ -53,7 +53,8 @@ export default {
         "switch",
         "colorpicker",
         "tags",
-        "progress"
+        "progress",
+        "text"
       ]
     };
   },
