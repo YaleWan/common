@@ -1,13 +1,13 @@
 {
   "name": "@yhcommon/generator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@yhcommon/form": "^0.1.0",
+    "@yhcommon/form": "^0.1.1",
     "core-js": "^3.6.5",
     "element-ui": "^2.13.2",
     "lodash.clonedeep": "^4.5.0",
