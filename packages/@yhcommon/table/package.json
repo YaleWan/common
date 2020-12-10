@@ -1,6 +1,6 @@
 {
   "name": "@yhcommon/table",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build --mode lib --target lib --name yhcommon-table --dest dist src/index.js",
