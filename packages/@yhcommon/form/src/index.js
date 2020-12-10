@@ -8,6 +8,7 @@ import CommonFormDatepicker from "./components/CommonFormDatepicker";
 import CommonFormRadio from "./components/CommonFormRadio";
 import CommonFormSwitch from "./components/CommonFormSwitch";
 import CommonFormSlider from "./components/CommonFormSlider";
+import CommonFormText from "./components/CommonFormText";
 
 // 组件列表
 const components = [
@@ -20,7 +21,8 @@ const components = [
   CommonFormDatepicker,
   CommonFormRadio,
   CommonFormSwitch,
-  CommonFormSlider
+  CommonFormSlider,
+  CommonFormText
 ];
 import FormMixin from "./mixins/form-mixin";
 
