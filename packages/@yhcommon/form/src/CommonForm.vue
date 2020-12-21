@@ -59,7 +59,12 @@ export default {
   computed: {
     formatedSchema() {
       let _schema = cloneDeep(this.formConfig);
-      return _schema.filter(item => !item.hide);
+      return _schema.filter(item => !this.isHide(item));
+    }
+  },
+  methods: {
+    isHide(item) {
+      return typeof item.hide === "function" ? item.hide() : item.hide;
     }
   }
 };
