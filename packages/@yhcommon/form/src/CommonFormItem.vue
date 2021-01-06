@@ -61,6 +61,8 @@ export default {
   methods: {
     // 组件名称
     getComponentName(type) {
+      type = typeof type === "function" ? type() : type;
+
       if (this.builtInNames.includes(type)) {
         // 内置组件
         return "Common-form-" + type;

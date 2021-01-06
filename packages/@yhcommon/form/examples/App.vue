@@ -1,6 +1,5 @@
 <template>
   <el-form size="small" label-width="80px" :model="formModel">
-    <el-button @click="type = !type">123</el-button>
     <common-form
       :formModel="formModel"
       :options="options"
@@ -16,21 +15,24 @@ export default {
     return {
       layout: { gutter: 29, justify: "start" },
       type: false,
+      msg: "",
       // 表单绑定模型
       formModel: {
         default_2: 123
       },
+      attrs: {
+        placeholder: "123"
+      },
       // 表单 schema
       schema: [
         {
-          type: "input",
+          type: () => (this.type ? "input" : "text"),
           prop: "default_2",
           formItem: { label: "label:" },
           attrs: {
             placeholder: "请输入支付渠道名称",
             clearable: true
-          },
-          hide: true
+          }
         }
       ],
       // 表单 options
@@ -51,6 +53,9 @@ export default {
     };
   },
   methods: {
+    abc() {
+      console.log("123", 123);
+    },
     onChange(val) {
       console.log("val", val);
     }
